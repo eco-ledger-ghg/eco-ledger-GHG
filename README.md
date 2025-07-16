@@ -14,3 +14,16 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+# 🌱 Eco Ledger GHG Emission Tool
+
+A **Streamlit**‑based tool to calculate and visualize GHG emissions (Scope 1, Scope 2, basic Scope 3) for organizations across the GCC region.
+
+---
+
+## 🚀 Deployment (Streamlit Cloud)
+
+1. **Fork or clone this repo**  
+   ```bash
+   git clone https://github.com/eco-ledger-ghg/eco-ledger-GHG.git
+   cd eco-ledger-GHG
+
