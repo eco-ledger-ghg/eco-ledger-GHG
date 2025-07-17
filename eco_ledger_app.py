@@ -43,7 +43,7 @@ def input_scope(scope):
     with tab1:
         st.subheader("Manual Data Entry")
         df = st.data_editor(pd.DataFrame({
-            "Activity Type": ["Diesel"],
+            "Activity Type": ["Petrol"],
             "Unit": ["liters"],
             "Quantity": [0],
             "Emission Factor": [2.68],
