@@ -119,21 +119,27 @@ def main():
         login()
         return
 
-    menu = ["Dashboard", "Company Profile", "Scope 1", "Scope 2", "Scope 3", "Reports"]
+    menu = ["Dashboard"]
     choice = st.sidebar.selectbox("Navigation", menu)
 
     if choice == "Dashboard":
         dashboard()
-    elif choice == "Company Profile":
-        company_profile()
-    elif choice == "Scope 1":
-        input_scope(1)
-    elif choice == "Scope 2":
-        input_scope(2)
-    elif choice == "Scope 3":
-        input_scope(3)
-    elif choice == "Reports":
-        generate_report()
+
 
 if __name__ == "__main__":
     main()
+def main():
+    if "authenticated" not in st.session_state:
+        login()
+        return
+
+    menu = ["Company Profile"]
+    choice = st.sidebar.selectbox("Navigation", menu)
+
+    if choice == "Company Profile":
+        dashboard()
+
+
+if __name__ == "__main__":
+    main()
+
