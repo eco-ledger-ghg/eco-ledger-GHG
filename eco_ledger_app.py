@@ -114,32 +114,35 @@ def generate_report():
 
 # ------------------- Routing -------------------
 
+# ------------------- Routing -------------------
+ 
 def main():
     if "authenticated" not in st.session_state:
         login()
         return
-
-    menu = ["Dashboard"]
-    choice = st.sidebar.selectbox("Navigation", menu)
-
-    if choice == "Dashboard":
+ 
+    st.sidebar.title("Eco Ledger Navigation")
+ 
+    main_menu = st.sidebar.radio("Main Menu", ["Dashboard", "Company Profile", "Scopes", "Generate Report"])
+ 
+    if main_menu == "Dashboard":
         dashboard()
-
-
+ 
+    elif main_menu == "Company Profile":
+        company_profile()
+ 
+    elif main_menu == "Scopes":
+        scope_option = st.sidebar.radio("Select Scope", ["Scope 1", "Scope 2", "Scope 3"])
+        if scope_option == "Scope 1":
+            input_scope(1)
+        elif scope_option == "Scope 2":
+            input_scope(2)
+        elif scope_option == "Scope 3":
+            input_scope(3)
+ 
+    elif main_menu == "Generate Report":
+        generate_report()
+ 
 if __name__ == "__main__":
     main()
-def main():
-    if "authenticated" not in st.session_state:
-        login()
-        return
-
-    menu = ["Company Profile"]
-    choice = st.sidebar.selectbox("Navigation", menu)
-
-    if choice == "Company Profile":
-        dashboard()
-
-
-if __name__ == "__main__":
-    main()
-
+ 
